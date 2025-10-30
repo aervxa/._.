@@ -34,6 +34,8 @@ Login to your system with the user you created (username + password)
 
 > Minimal KDE is recommended if you plan to use kde as only a fallback (and use hyprland as ur main maybe)
 
+Install KDE in either of these two ways:
+
 <details>
 <summary>For the minimal KDE: (recommended)</summary>
 
@@ -69,4 +71,4 @@ sudo pacman -S plasma
 ```
 </details>
 
-After installing plasma in either of these two ways, reboot.
+Now reboot.
