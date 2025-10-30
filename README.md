@@ -1,4 +1,4 @@
-# ._.
+# ._. **⚠️ WIP ⚠️**
 
 A simple guide to setup a basic setup for arch linux while learning along the way! (without messing up). actually setting ur arch up, not copying  "dotfiles" or running pre-configured install scripts.
 
