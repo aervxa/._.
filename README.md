@@ -1,4 +1,4 @@
-# ._. **⚠️ WIP ⚠️**
+ # ._. **⚠️ WIP ⚠️**
 
 A simple guide to setup a basic setup for arch linux while learning along the way! (without messing up). actually setting ur arch up, not copying  "dotfiles" or running pre-configured install scripts.
 
@@ -59,6 +59,44 @@ sudo pacman -S bluez pipewire-pulse plasma-pa bluedevil
 > ```bash
 > sudo systemctl enable sddm
 > ```
+
+<details>
+<summary>Get the network widget on Plasma</summary>
+
+1. Install the manager that plasma uses ([`networkmanager`](https://wiki.archlinux.org/title/NetworkManager)):
+```bash
+sudo pacman -S network-manager
+```
+
+2. Enable the manager:
+```bash
+sudo systemctl enable NetworkManager
+```
+
+3. Install Plasma's widget:
+```bash
+sudo pacman -S plasma-nm
+```
+
+> `plasma-nm` would automatically install and enable `networkmanager` if it's not already installed, but we are trying to setup most of the things on our own, so that we can later switch out `plasma-nm` with anything else if we decide to switch DEs (e.g. Hyprland setup on top of this)
+
+### step 4 and 5 is for changing the default wifi backend (recommended)
+
+> optinionated.
+
+4. Set the backend to `iwd` (`networkmanager` comes with it's default backend 'wa_supplicant', `iwd` is arch's default, so it's more seamless to just keep using that):
+```bash
+sudo bash -c 'printf "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf'
+```
+
+5. Disable the `iwd` service (`networkmanager` should invoke it for it's usage):
+```bash
+sudo systemctl disable iwd
+```
+
+You will switch to the new network setup after a reboot.
+
+</details>
 
 </details>
 
