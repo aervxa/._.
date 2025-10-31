@@ -33,80 +33,64 @@ Once the installation completes successfully, reboot into your newly installed s
 Login to your system with the user you created (username + password)
 
 > Minimal KDE is recommended if you plan to use kde as only a fallback (and use hyprland as ur main maybe)
+if you want the whole OOBE and the whole plasma package, you can install [`plasma`](https://wiki.archlinux.org/title/KDE#:~:text=the%20plasma%20group.)
 
-Install KDE in either of these two ways:
+Install KDE step by step:
 
-<details>
-<summary>For the minimal KDE: (recommended)</summary>
+**base:**
 
-base: [sddm](https://wiki.archlinux.org/title/SDDM) (login manager), [plasma](https://wiki.archlinux.org/title/KDE#:~:text=Alternatively%2C%20for%20a%20more%20minimal%20Plasma%20installation%2C%20install%20the%20plasma-desktop%20package.) (desktop environment), and [kitty](https://wiki.archlinux.org/title/Kitty) (terminal emulator)
+1. Install [sddm](https://wiki.archlinux.org/title/SDDM) (login manager), [plasma](https://wiki.archlinux.org/title/KDE#:~:text=Alternatively%2C%20for%20a%20more%20minimal%20Plasma%20installation%2C%20install%20the%20plasma-desktop%20package.) (desktop environment), and [kitty](https://wiki.archlinux.org/title/Kitty) (terminal emulator)
 ```bash
 sudo pacman -S sddm plasma-desktop kitty
 ```
-> it will ask you to pick a package for jack, pick `pipewire-jack`, and pick `ffmpeg` for the media backend
+> `plasma-desktop` will ask you to pick a package for "jack", pick `pipewire-jack`, and pick `ffmpeg` for the "media backend"
 
-> to enable the login manager, you will have to run (will take effect after reboot):
-> ```bash
-> sudo systemctl enable sddm
-> ```
+2. Enable `sddm` (will take effect after reboot):
+```bash
+sudo systemctl enable sddm
+```
 
-utils: [bluez](https://wiki.archlinux.org/title/Bluetooth) (bluetooth), [pipewire-pulse](https://wiki.archlinux.org/title/PipeWire#PulseAudio_clients) (bt audio), [plasma-pa](https://wiki.archlinux.org/title/KDE#Sound_applet_in_the_system_tray) + [bluedevil](https://wiki.archlinux.org/title/Bluetooth#Graphical#:~:text=Bluedevil) (kde plasma applet support for audio and bluetooth respectively)
+**utils:**
+
+1. Install [bluez](https://wiki.archlinux.org/title/Bluetooth) (bluetooth), [pipewire-pulse](https://wiki.archlinux.org/title/PipeWire#PulseAudio_clients) (bt audio), [plasma-pa](https://wiki.archlinux.org/title/KDE#Sound_applet_in_the_system_tray) + [bluedevil](https://wiki.archlinux.org/title/Bluetooth#Graphical#:~:text=Bluedevil) (kde plasma applet support for audio and bluetooth respectively)
 ```bash
 sudo pacman -S bluez pipewire-pulse plasma-pa bluedevil
 ```
 
-> to enable bluetooth, you will have to run (will take effect after reboot):
-> ```bash
-> sudo systemctl enable sddm
-> ```
+2. Enable bluetooth (will take effect after reboot):
+```bash
+sudo systemctl enable bluetooth
+```
 
-<details>
-<summary>Get the network widget on Plasma</summary>
+**network widget:** (optional but recommended, network will still work without this)
 
-1. Install the manager that plasma uses ([`networkmanager`](https://wiki.archlinux.org/title/NetworkManager)):
+1. Install [`networkmanager`](https://wiki.archlinux.org/title/NetworkManager) (network manager):
 ```bash
 sudo pacman -S network-manager
 ```
 
-2. Enable the manager:
+2. Enable `networkmanager` (will take effect after reboot):
 ```bash
 sudo systemctl enable NetworkManager
 ```
 
-3. Install Plasma's widget:
+3. Install `plasma-nm` (plasma widget for `networkmanager`):
 ```bash
 sudo pacman -S plasma-nm
 ```
 
 > `plasma-nm` would automatically install and enable `networkmanager` if it's not already installed, but we are trying to setup most of the things on our own, so that we can later switch out `plasma-nm` with anything else if we decide to switch DEs (e.g. Hyprland setup on top of this)
 
-### step 4 and 5 is for changing the default wifi backend (recommended)
+> steps 4 and 5 is for changing the default wifi backend (_opinionated-ly recommended_), if you're using cable, you may skip this (_steps are still opinionated-ly recommended_)
 
-> optinionated.
-
-4. Set the backend to `iwd` (`networkmanager` comes with it's default backend 'wa_supplicant', `iwd` is arch's default, so it's more seamless to just keep using that):
+4. Set the backend to `iwd` (`networkmanager` comes with it's default backend `wa_supplicant`, `iwd` is arch's default, so it's more seamless to just keep using that):
 ```bash
 sudo bash -c 'printf "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf'
 ```
 
-5. Disable the `iwd` service (`networkmanager` should invoke it for it's usage):
+5. Disable the `iwd` "standalone" service (will take effect after reboot):
 ```bash
 sudo systemctl disable iwd
 ```
 
-You will switch to the new network setup after a reboot.
-
-</details>
-
-</details>
-
-<details>
-<summary>For the whole KDE experience:</summary>
-
-the one universal package [`plasma`](https://wiki.archlinux.org/title/KDE#:~:text=the%20plasma%20group.) for the whole OOBE:
-```bash
-sudo pacman -S plasma
-```
-</details>
-
-Now reboot.
+### Now reboot. Happy booting!!
