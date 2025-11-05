@@ -1,4 +1,7 @@
- # **⚠️ WIP ⚠️** Set up your very own arch setup!
+# **⚠️ WIP ⚠️** Set up your very own arch setup!
+
+what is this?
+> simply my dotfiles, but a guide to how i "made" it
 
 A simple guide to setup a minimal setup for arch linux while learning along the way! (without messing up). you will actually setup ur arch, not copy  "dotfiles" or run pre-configured install scripts.
 
