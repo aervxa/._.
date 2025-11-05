@@ -1,30 +1,34 @@
- # ._. **⚠️ WIP ⚠️**
+ # **⚠️ WIP ⚠️** Set up your very own arch setup!
 
-A simple guide to setup a basic setup for arch linux while learning along the way! (without messing up). actually setting ur arch up, not copying  "dotfiles" or running pre-configured install scripts.
-
-> clicking the links for further understanding is recommended, but if it confuses you, skip it! seriously, it will only confuse you more. (then just watch some beginner stuff on yt, works wonders)
+A simple guide to setup a minimal setup for arch linux while learning along the way! (without messing up). you will actually setup ur arch, not copy  "dotfiles" or run pre-configured install scripts.
 
 Desktop environments targetted: Hyprland, with KDE/minimal as a safe fallback.
-> Having less total packages in ur PC would not make your PC that much faster, keep KDE as a fallback until you feel comfortable blindfolded /s (s is for sarcasm btw)
 
-> ### ⚠️ a basic understanding of what is what is needed since this guide is not written that well _yet_.
+> Having less total packages in ur PC would not make your PC that much faster, keep KDE as a fallback until you feel comfortable blindfolded
 
-## Installation of Arch via `archinstall`
+### ⚠️ a basic understanding of what is what is needed.
 
-> ('ch' in 'arch' is pronounced as in 'ch' in 'change', not 'ark')
+# Overview
+
+1. Firstly, Arch Linux will be installed.
+2. Second, we will install KDE Plasma as a safe base for you to start your journey, optionally we will also rice KDE
+3. If feeling more adventurous, we will also install Hyprland, customize, and rice it (it is recommended to not skip step 2 even if you want _just_ Hyprland)
+
+# 1. Installation of Arch via `archinstall`
+
+### ⚠️ It is important you leave everything else as-is
+> If you do know what you're doing, you could customize this as you wish.
 
 **the following options are required:**
-- fs: btrfs (default structure + compression)
-> fs is udner disk config (manual partition > select disk > suggest layout > btrfs)
-- hostname: give ur pc a cool name
-- authentication: root + user (sudo)
-- network: copy iso
+- fs: _btrfs_ (default structure + compression)
+> fs is under disk config (manual partition > select disk > suggest layout > btrfs)
+- hostname: _give ur pc a cool name_
+- authentication: _root + user_ (sudo)
+- network: _copy iso_
 
 **it is also recommended to set the following, but it is not required:**
-- mirrors: select your region
-- timezone: select your timezone
-
-> ### ⚠️ It is important you leave everything else as-is
+- mirrors: _select your region_
+- timezone: _select your timezone_
 
 Once the installation completes successfully, reboot into your newly installed system..
 
