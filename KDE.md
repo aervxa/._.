@@ -63,9 +63,17 @@ sudo bash -c 'printf "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/w
 sudo systemctl disable iwd
 ```
 
-**browser:** firefox (or anything else that you prefer)
+### Now reboot. Happy booting!!
+
+
+After rebooting, you may opt in to install these additionals:
+
+**essential apps:** Install firefox (or any other browser), dolphin (file explorer)
 ```bash
-sudo pacman -S firefox
+sudo pacman -S firefox dolphin
 ```
 
-### Now reboot. Happy booting!!
+**kde settings:** Install [kde-gtk-config](https://wiki.archlinux.org/title/GTK#:~:text=kde-gtk-config) (GTK theming), kscreen (display settings)
+```bash
+sudo pacman -S kde-gtk-config kscreen
+```
