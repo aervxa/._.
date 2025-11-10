@@ -70,10 +70,11 @@ After rebooting, you may opt in to install these additionals:
 
 **essential apps:** Install firefox (or any other browser), dolphin (file explorer)
 ```bash
-sudo pacman -S firefox dolphin
+sudo pacman -S firefox chromium dolphin
 ```
+> I usually install both chromium and firefox for debugging purposes, feel free to choose just one browser.
 
-**kde settings:** Install [kde-gtk-config](https://wiki.archlinux.org/title/GTK#:~:text=kde-gtk-config) (GTK theming), kscreen (display settings)
+**kde settings:** Install [kde-gtk-config](https://wiki.archlinux.org/title/GTK#:~:text=kde-gtk-config) (GTK theming), kscreen (display settings). (you may optionally want to search up for other setting supports too)
 ```bash
 sudo pacman -S kde-gtk-config kscreen
 ```
