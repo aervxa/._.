@@ -5,6 +5,7 @@ By now, you should know that 'installing' something would mean using `pacman` fo
 > the AUR is where everything that if not "official" by the Arch team goes, hence the name, "User" repository. Practicing caution when installing for the AUR is adviced.
 
 > ### I won't list the whole installations of each thing i used, but what i will do is list it, and what it does.
+> If i link a github repo, make sure to follow it's installation guide completely, otherwise the package itself would be enough for the functionality.
 
 ## Installing the AUR helper installer
 
@@ -18,4 +19,5 @@ Installation of `yay` (or you could follow the [official installation](https://g
 
 ## "Aesthetic" additions
 
-- [`ffmpegthumbs`](https://archlinux.org/packages/extra/x86_64/ffmpegthumbs/) (thumbnails for video files in dolphin)
+- `ffmpegthumbs` (thumbnails for video files in dolphin)
+- [`sddm-silent-theme`](https://github.com/uiriansan/SilentSDDM?tab=readme-ov-file#AUR-packages-for-arch)ᴬᵁᴿ (sddm theme)
