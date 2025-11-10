@@ -78,3 +78,8 @@ sudo pacman -S firefox chromium dolphin
 ```bash
 sudo pacman -S kde-gtk-config kscreen
 ```
+
+## Installations that are "aesthetic" or of my person preference will be installed here:
+[KDE_personal.md](KDE_personal.md)
+
+
