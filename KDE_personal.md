@@ -17,7 +17,13 @@ Installation of `yay` (or you could follow the [official installation](https://g
 2. cd yay
 3. makepkg -si
 
-## "Aesthetic" additions
+## "Aesthetic"/"Base" additions
+
+The ones that don't need it's own section:
 
 - `ffmpegthumbs` (thumbnails for video files in dolphin)
 - [`sddm-silent-theme`](https://github.com/uiriansan/SilentSDDM?tab=readme-ov-file#AUR-packages-for-arch)ᴬᵁᴿ (sddm theme)
+- `gwenview` (image viewer)
+- `kcalc` (calculator)
+- `kclock` (clock app for alarms and so on)
+- `kwrite` (i need a notepad like thing to type on)
