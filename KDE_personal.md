@@ -27,3 +27,9 @@ The ones that don't need it's own section:
 - `kcalc` (calculator)
 - `kclock` (clock app for alarms and so on)
 - `kwrite` (i need a notepad like thing to type on)
+
+Things that include it's .config but doesn't need it's own section:
+
+> If you just installed the package, feel free to overwrite the config files
+
+- `spectacle` ((config)[.config/spectaclerc])
