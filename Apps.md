@@ -35,6 +35,8 @@ XMODIFIERS=@im=fcitx
 
 - By default, it's `Ctrl`+`Alt`+`.`, in my dotfiles, `Super`+`.`
 
+you may also want to disable "Clipboard", "Quick phrase", and "Unicode" in the Addons tab (just hit delete on the keyboard shortcut)
+
 Restart your pc.
 
 > [!NOTE]
